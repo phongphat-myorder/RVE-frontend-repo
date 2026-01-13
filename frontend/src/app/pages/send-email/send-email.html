@@ -1,0 +1,46 @@
+<div class="container">
+  <h2>Review Workshop</h2>
+
+  <form (ngSubmit)="sendEmail()">
+    <!-- <input
+      type="email"
+      placeholder="To"
+      [(ngModel)]="form.to"
+      name="to"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="Subject"
+      [(ngModel)]="form.subject"
+      name="subject"
+      required
+    /> -->
+
+    <textarea
+      placeholder="Message"
+      [(ngModel)]="form.message"
+      name="message"
+      rows="5"
+      required
+    ></textarea>
+
+    <button type="submit" [disabled]="loading">
+      @if (!loading) {
+        <span class="send-icon">Send</span>
+      }
+      @else {
+        <span class="spinner">Sending...</span>
+      }
+    </button>
+  </form>
+
+  @if (success) {
+    <p class="success-message">Email sent ✅</p>
+  }
+  @if (error) {
+    <p  class="error-message">Send failed ❌</p>
+  }
+
+</div>
