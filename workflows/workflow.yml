@@ -1,0 +1,24 @@
+# name: CI
+# on:
+#   push:
+#     branches:
+#       - develop
+#     tags:
+#       - 'v[0-9]+.[0-9]+.[0-9]+'
+#   workflow_dispatch:
+
+# run-name: Deploy  by ${{ github.actor }} on ${{ github.ref }}
+  
+# jobs:
+#   call-workflow-template:
+#     uses: myorder-intelligence/ci-template/.github/workflows/expressjs-template.yml@master
+#     with:
+#       SVC_NAME: 
+#       DOMAIN: mod-am
+#       NODE_VERSION: 22
+#       UNIT_TEST: true
+#       LINTER: true
+#       COMPONENT_TEST: false
+#       SCAN_IMAGE: false
+#       BRUNO_API_TEST: false
+#     secrets: inherit
