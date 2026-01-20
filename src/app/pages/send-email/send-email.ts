@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, Injectable } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { throwError } from 'rxjs';
 import { catchError, finalize, timeout } from 'rxjs/operators';
@@ -13,10 +13,9 @@ import { environment } from '../../environments/environment';
   templateUrl: './send-email.html',
   styleUrls: ['./send-email.css']
 })
+@Injectable()
 export class SendEmail {
   form = {
-    // to: '',
-    // subject: '',
     message: ''
   };
 
